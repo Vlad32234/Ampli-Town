@@ -1,0 +1,14 @@
+body {
+  display: flex;
+justify-content: space-around;
+}
+
+.a {
+  height: 200px;
+  width: 200px;
+}
+
+.b {
+  height: 200px;
+  width: 200px;
+}
