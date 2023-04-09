@@ -41,13 +41,12 @@ color: #0499ff;
 }
 
 header{
-  padding-top: 40px;s
+  padding-top: 40px;
   width: 100%;
   height: 400px;
   background-image: url("https://tse2.mm.bing.net/th?id=OIP.9mmaqwBQ2np6vLgvKk8vYAHaEK&pid=Api&P=0");
   background-size: cover;
   text-align: center;
-
 }
 
 .tag {
@@ -56,6 +55,16 @@ header{
   margin: 10px auto;
   background-color: #fff;
   border-radius: 10px;
+}
+
+.header {
+   transition: padding 0.3s ease-out, image 10s ease, color 1s ease;
+}
+
+.header:hover {
+  padding: 30px;
+  background-image: url("https://tse1.mm.bing.net/th?id=OIP.XQuP-JtFu2kelX40zSp8gAHaEo&pid=Api&P=0");
+  color: White;
 }
 
 header img {
@@ -107,8 +116,29 @@ footer {
 
 .tag-yellow {
   background-color: #ff9904;
+  transition: color 1s ease, background-color 1s ease;
 }
+
+.tag-yellow:hover {
+  background-color: White;
+  color: #ff9904;
+}
+
 
 .tag-blue {
   background-color: #0399ff;
+  transition: color 1s ease, background-color 1s ease;
+}
+
+.tag-blue:hover {
+  background-color: White;
+  color: #0399ff;
+}
+
+.footer_image {
+  border-radius: 50%;
+  border: 2px solid #000;
+  transition: all .5s;
+  width: 30px;
+  height: 30px;
 }
