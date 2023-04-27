@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Advanced Designs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/castom.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo"><strong>Positioning</strong> by Ampli</a>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>Позиціювання</h1>
+					<ul class="actions">
+						<li><a href="#one" class="button alt scrolly big">Гортай далі</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<article id="one" class="post style1">
+				<div class="image">
+					<img src="images/pic14.jpg"/>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a>Стаття перша: Positioning</a></h2>
+							<p class="info">Today by <a href="#">Vlad</a></p>
+						</header>
+						<p>
+							Властивість position дозволяє точно задати нове розташування блоку щодо місця, де він перебував у нормальному потоці документа. За замовчуванням всі елементи розташовуються послідовно один за одним у порядку, в якому вони визначені в структурі HTML-документа. Властивість не успадковується.
+						</p>
+						<ul class="actions">
+							<li><a href="https://html5book.ru/css-position/" class="button alt">Читати далі</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#" class="prev disabled"><span class="icon fa-chevron-up"></span></a>
+						<a href="#two" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+
+		<!-- Two -->
+			<article id="two" class="post invert style1 alt">
+				<div class="image">
+					<img src="images/pic13.jpg" alt="" data-position="10% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="generic.html">Стаття друга: Fixed</a></h2>
+							<p class="info">Tomorrow by <a href="#">Vlad</a></p>
+						</header>
+						<p>Фіксує елемент у вказаному місці сторінки. Блоком-контейнером фіксованого елемента є вікно перегляду, тобто елемент завжди фіксується щодо вікна браузера та не змінює свого положення під час прокручування сторінки. Сам елемент у своїй повністю видаляється з основного потоку документа і у новому потоці документа.</p>
+						<ul class="actions">
+							<li><a href="https://html5book.ru/css-position/" class="button alt">Читати далі</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#one" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+						<a href="#three" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+
+		<!-- Three -->
+			<article id="three" class="post style2">
+				<div class="image image-relative">
+					<img src="images/pic12.jpg" alt="" data-position="80% center" />
+					<div class="overlay">
+						<h2>А я абсолютний</h2>
+					</div>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="generic.html">Стаття третя: absolute</a></h2>
+							<p class="info">Today by <a href="#">Vlad</a></p>
+						</header>
+						<p>
+							Абсолютно позиціонований елемент повністю видаляється з потоку документа і позиціонується щодо меж його блоку-контейнера (іншого елемента або вікна браузера). Блок-контейнер для абсолютно позиціонованого елемента - найближчий елемент-предок, значення якості position якого не дорівнює static. Розташування країв елемента визначається за допомогою властивостей усунення. Простір, який займав такий елемент, хлопається, начебто елемента не існувало на сторінці. Абсолютно позиціонований елемент може перекривати інші елементи або перекритим ними (за рахунок властивості z-index). Будь-який абсолютно позиціонований елемент генерує блок, тобто набуває значення display: block;
+</p>
+						<ul class="actions">
+							<li><a href="https://html5book.ru/css-position/" class="button alt">Читати далі</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#two" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+						<a href="#four" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+
+		<!-- Four -->
+			<article id="four" class="post invert style2 alt">
+				<div class="image">
+					<img src="images/pic14.jpg" alt="" data-position="60% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="generic.html">Стаття четверта: relative</a></h2>
+							<p class="info">Today by <a href="#">Vlad</a></p>
+						</header>
+						<p>Відносно позиціонований елемент зсувається зі свого звичайного місця у різних напрямках щодо кордонів батьківського контейнера, а простір, що він займав, не зникає. Цей елемент може перекривати інший вміст на сторінці. Якщо щодо позиціонованого елемента одночасно задати властивості top і bottom чи left і right, то першому випадку спрацює лише top, у другому — left. Відносне позиціонування дозволяє задавати z-index елемента, а також абсолютно позиціонувати дочірні елементи всередині блоку.</p>
+						<ul class="actions">
+							<li><a href="https://html5book.ru/css-position/" class="button alt">Читати далі</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#three" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+						<a href="#five" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+			</footer>
+	</body>
+</html>
