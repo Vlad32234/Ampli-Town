@@ -18,7 +18,7 @@ function addItems() {
   createItem(375, 400, 'coin');
   createItem(575, 500, 'coin');
   createItem(225, 500, 'coin');
-  createItem(100, 250, 'coin');
+  createItem(650, 490, 'coin');
   createItem(575, 150, 'coin');
   createItem(525, 300, 'coin');
   createItem(650, 250, 'coin');
@@ -37,7 +37,7 @@ function addPlatforms() {
   platforms.create(300, 450, 'platform');
   platforms.create(250, 150, 'platform');
   platforms.create(50, 300, 'platform');
-  platforms.create(150, 250, 'platform');
+  platforms.create(650, 450, 'platform');
   platforms.create(650, 300, 'platform');
   platforms.create(550, 200, 'platform2');
   platforms.create(300, 450, 'platform2');
