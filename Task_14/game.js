@@ -18,7 +18,7 @@ function addItems() {
   createItem(375, 400, 'coin');
   createItem(575, 500, 'coin');
   createItem(225, 500, 'coin');
-  createItem(650, 410, 'coin');
+  createItem(650, 400, 'coin');
   createItem(575, 150, 'coin');
   createItem(525, 300, 'coin');
   createItem(650, 50, 'coin');
@@ -27,6 +27,7 @@ function addItems() {
   createItem(370,500,'poison');
   createItem(100, 375, 'poison');
   createItem(125, 50, 'star');
+  createItem(75, 250, 'star');
 }
 
 // add platforms to the game
@@ -36,9 +37,9 @@ function addPlatforms() {
   platforms.create(100, 550, 'platform');
   platforms.create(300, 450, 'platform');
   platforms.create(250, 150, 'platform');
-  platforms.create(50, 300, 'platform');
+  platforms.create(0, 300, 'platform');
   platforms.create(650, 100, 'platform');
-  platforms.create(650, 500, 'platform');
+  platforms.create(650, 450, 'platform');
   platforms.create(550, 200, 'platform2');
   platforms.create(300, 450, 'platform2');
   platforms.create(400, 350, 'platform2');
