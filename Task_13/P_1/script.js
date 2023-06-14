@@ -4,3 +4,4 @@ document.write('Who are you?');
 answer = prompt("Where do you live?", "default answer");
 console.log(answer);
 alert(answer);
+ document.getElementById("result").innerHTML = answer;

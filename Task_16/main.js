@@ -2,24 +2,16 @@ var messages = document.getElementById('messages');
 var sendButton = document.getElementById('send-btn');
 
 sendButton.addEventListener('click', sendUserMessage);
-getMessagesFromServer();
+
+function start() {
+  setInterval(getMessagesFromServer, 2000);
+}
 
 async function getMessagesFromServer() {
-  var response = await fetch('https://vlad32234.github.io/Ampli-Town/Task_16/index.html');
+  var response = await fetch('http://localhost:8000/1?offset=0&limit=10');
   response = await response.json();
 
-  var allMessagesHTML = '';
-  for (var i = 0; i <response.length; i++){
-    var messageData = response[i];
-    var message = `
-        <div class="message">
-          <div class="message-nickname"> ${messageData.Name} </div>
-          <div class="message-text"> ${messageData.Message} </div>
-        </div>
-        `
-        allMessagesHTML = allMessagesHTML + message;
-    }
-
+  var messagesHTML = fromMessagesHTML
 
     messages.innerHTML = allMessagesHTML;
   }
@@ -37,7 +29,7 @@ async function getMessagesFromServer() {
       return;
     }
 
-    await fetch('https://vlad32234.github.io/Ampli-Town/Task_16/index.html', {
+    await fetch('http://localhost:8000/1?offset=0&limit=10', {
       method: 'POST',
       body: JSON.stringify({
         Name: userNickname,
@@ -46,4 +38,24 @@ async function getMessagesFromServer() {
     });
 
     getMessagesFromServer();
+    scrollToEnd();
+  }
+
+  function fromMessagesHTML(messages) {
+    var allMessagesHTML = '';
+    for (var i = 0; i <messages.length; i++){
+      var messageData = response[i];
+      var message = `
+          <div class="message">
+            <div class="message-nickname"> ${messageData.Name} </div>
+            <div class="message-text"> ${messageData.Message} </div>
+          </div>
+          `
+          allMessagesHTML = allMessagesHTML + message;
+      }
+      return allMessagesHTML:
+  }
+
+  function.scrollToEnd() {
+    messages.scrollTop = messages.scrollHeight;
   }
