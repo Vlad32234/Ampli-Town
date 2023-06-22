@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "npx nodemon chat.js"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  },
+  "name": "chat",
+  "version": "1.0.0",
+  "main": "chat.js",
+  "dependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
