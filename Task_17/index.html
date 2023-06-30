@@ -2,7 +2,7 @@
 <head>
 	<title>Arcanoid 2D Game</title>
 	<style>
-		canvas { 
+		canvas {
 			background: #eee;
 			border: solid 1px black;
 		}
@@ -13,7 +13,7 @@
 	<input type = "button" value="Click Me to Start" onclick="startGame();"></input><br>
 	<span id="result"></span><br>
 	<canvas id="gameZone" width="480" height="320"></canvas>
-	
+
 	<script>
 		// Зона для рисования
 		var canvas = document.getElementById("gameZone");
@@ -129,7 +129,7 @@
 		  ctx.fill();
 		  ctx.closePath();
 		}
-		
+
 		// Рисование платформы для мячика
 		function drawPaddle() {
 		  ctx.beginPath();
@@ -138,7 +138,7 @@
 		  ctx.fill();
 		  ctx.closePath();
 		}
-		
+
 		// Рисование блоков-кирпичиков исходя из их статуса
 		function drawBricks() {
 		  for(var c=0; c<brickColumnCount; c++) {
@@ -157,14 +157,14 @@
 			}
 		  }
 		}
-		
+
 		// Рисуем счет игры
 		function drawScore() {
 		  ctx.font = "16px Arial";
 		  ctx.fillStyle = "#0095DD";
 		  ctx.fillText("Score: "+score, 8, 20);
 		}
-		
+
 		// Рисуем оставшееся количество жизней
 		function drawLives() {
 		  ctx.font = "16px Arial";
@@ -179,7 +179,7 @@
 		  spanResult.innerHtml = "";
 		  draw();
 		}
-		
+
 		// Рисуем все элементы и запускаем игру
 		function draw() {
 		  ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -204,7 +204,7 @@
 			  // Если шарик на уровне платформы, но не пересекается с ней, то уменьшаем количество жизней
 			  lives--;
 			  // Если количество жизней = 0 - игра окончена
-			  if(!lives) {				
+			  if(!lives) {
 				alert("YOU LOSE!");
 				document.location.reload();
 			  }

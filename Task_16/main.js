@@ -12,12 +12,13 @@ var lastMessages = [];
 
 async function getMessagesFromServer() {
   let roomName = getRoomName(); // Я ДОДАВ ОТРИМАННЯ КІМНАТИ
-  var response = await fetch(`http://localhost:8000/${1}?offset=0&limit=10`); // ТУТ ПОМИЛКА БУЛА У ПЕРЕДАЧІ ПАРАМЕТРІВ У ФУНКЦІЮ FETCH
+  var response = await fetch(`http://localhost:8000/${roomName}?offset=0&limit=100`); // ТУТ ПОМИЛКА БУЛА У ПЕРЕДАЧІ ПАРАМЕТРІВ У ФУНКЦІЮ FETCH
   response = await response.json();
+  console.log (response);
 
   var messagesHTML = fromMessagesHTML(response);
 
-    messages.innerHTML = allMessagesHTML;
+    messages.innerHTML = messagesHTML;
   }
 
   async function sendUserMessage() {
@@ -34,11 +35,11 @@ async function getMessagesFromServer() {
       return;
     }
 
-    await fetch(`http://localhost:8000/${1}`, { // Я ПІДСТАВИВ КІМНАТУ
+    await fetch(`http://localhost:8000/${roomName}`, { // Я ПІДСТАВИВ КІМНАТУ
       method: 'POST',
       body: JSON.stringify({
-        Name: userNickname,
-        Message: userMessage
+        name: userNickname,
+        message: userMessage
       })
     });
 
@@ -46,19 +47,20 @@ async function getMessagesFromServer() {
     scrollToEnd();
   }
 
-  function fromMessagesHTML(messages) {
+  function fromMessagesHTML(response) {
     var allMessagesHTML = '';
-    for (var i = 0; i < messages.length; i++){
+    for (var i = 0; i < response.length; i++){
       var messageData = response[i];
+  console.log (messageData);
       var message = `
           <div class="message">
-            <div class="message-nickname"> ${messageData.Name} </div>
-            <div class="message-text"> ${messageData.Message} </div>
+            <div class="message-nickname"> ${messageData.name} </div>
+            <div class="message-text"> ${messageData.message} </div>
           </div>
           `
           allMessagesHTML = allMessagesHTML + message;
-      }
-  return allMessagesHTML;
+        }
+        return allMessagesHTML;
   }
 
   function scrollToEnd() {
