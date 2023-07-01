@@ -77,20 +77,20 @@
 
 		// Функция для обработчик события "Нажата кнопка" - определяет вид кнопки и устанавливает соответсвующий флаг в true
 		function keyDownHandler(e) {
-			if(e.key == "Right" || e.key == "ArrowRight") {
+			if (e.key == "Left" || e.key == "ArrowLeft") {
 				rightPressed = true;
 			}
-			else if(e.key == "Left" || e.key == "ArrowLeft") {
+			else if(e.key == "Right" || e.key == "ArrowRight") {
 				leftPressed = true;
 			}
 		}
 
 		// Функция для обработчик события "Поднята кнопка" - определяет вид кнопки и устанавливает соответсвующий флаг в false
 		function keyUpHandler(e) {
-			if(e.key == "Right" || e.key == "ArrowRight") {
+			if(e.key == "Left" || e.key == "ArrowLeft") {
 				rightPressed = false;
 			}
-			else if(e.key == "Left" || e.key == "ArrowLeft") {
+			else if(e.key == "Right" || e.key == "ArrowRight") {
 				leftPressed = false;
 			}
 		}
